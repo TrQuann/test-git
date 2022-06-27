@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px">
+        <tr>
+            <td>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="images/img1.jpg" height="150px" class="img1">
+                <img src="images/img2.jpg" class="img2">
+                <img src="images/img3.jpg" class="img3">
+            </td>
+        </tr>
+    </table>
+
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            $(".img1").click(function(){
+                $('p').replaceWith('<p align="center"><img src="images/img1.jpg" class="img1"></p>')
+            });
+
+            $(".img2").click(function(){
+                $('p').replaceWith('<p  align="center"><img src="images/img2.jpg" class="img2"></p>')
+            });
+
+            $(".img3").click(function(){
+                $('p').replaceWith('<p  align="center"><img src="images/img3.jpg" class="img3"></p>')
+            });
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="write">Học lập trình javascript online toidicode cùng tôi</div>
+    <button class="addtru">Trừ</button>
+    <button class="reset">Reset</button>
+    <button class="addcong">Cộng</button>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // alert(132);
+            var a = $(".write").css('font-size');
+            fontsize = parseInt(a);
+            $(".addcong").click(function() {
+                if (fontsize < 26) {
+                    fontsize = fontsize + 2;
+                    $(".write").css('font-size' , fontsize + 'px');
+                } 
+                localStorage.setItem('cong', fontsize)
+            })
+
+            $(".reset").click(function() {
+                fontsize = 16;
+                $(".write").css('font-size' , fontsize + 'px');
+                localStorage.setItem('reset', fontsize)
+            })
+
+            $(".addtru").click(function() {
+                if (fontsize > 8) {
+                    fontsize = fontsize - 2;
+                    $(".write").css('font-size' , fontsize + 'px');
+                }
+                localStorage.setItem('tru', fontsize)
+            })
+        })
+
+    </script>
+</body>
+</html>
